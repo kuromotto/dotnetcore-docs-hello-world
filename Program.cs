@@ -25,6 +25,10 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
-File.AppendAllText(@"D:¥local¥a.txt", "Hello World!");
+try {
+	File.AppendAllText(@"D:¥local¥a.txt", "Hello World!");
+} catch ( Exception ex) {
+	// 何もしない
+}
 
 app.Run();
