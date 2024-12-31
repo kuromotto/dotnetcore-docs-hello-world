@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -21,5 +24,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+File.AppendAllText(@"D:¥local¥a.txt", "Hello World!");
 
 app.Run();
